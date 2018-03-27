@@ -82,12 +82,13 @@
 	min-width: 100%;
 	min-height: 100%;
 	z-index: 10;
-
 }
 
-.ghost-animation:hover {
+
+
+.ghost-animation {
 	animation: glitch 1s;
-	animation-iteration-count: 3;
+	animation-iteration-count: 5;
 }
 
 @keyframes glitch {
@@ -101,8 +102,44 @@
 	/*keyframe needs the ghost-animation to end in display none*/
 } 
 
+.ghost2{
+	position: fixed;
+	left: 0;
+	top: -100px;
+	min-width: 100%;
+	min-height: 100%;
+	z-index: 20;
+}
+
+.ghost-animation2 {
+	animation: glitchtwo 3s;
+	animation-iteration-count: 1;
+}
+
+@keyframes glitchtwo {
+	0% {opacity: 0;}
+	10% {opacity: 1}
+	80% {opacity: 1}
+	85% {opacity: 0.85}
+	90% {opacity: 0.55}
+	95% {opacity: 0.35}
+	100% {opacity: 0;}
+
+	/*keyframe needs the ghost-animation to end in display none*/
+} 
+
+.hide {
+	display: none;
+}
+
 .invisible-top-layer{
 	z-index: 1000;
+	opacity: 0;
+}
+
+.invisible-top-layer-erase{
+	z-index: 1100;
+	background: color: red;
 	opacity: 0;
 }
 
@@ -110,7 +147,7 @@ q:hover{
 	color: #888843;
 }
 
-.no{
+.no-effect{
 	padding: -10px;
 	font-size: 50px;
 	font-family: sans-serif;
@@ -189,6 +226,182 @@ q:hover{
 	100% {opacity: 0;}
 }
 
+.igotyou-background{
+	position: absolute;
+	background-color: #0d0a0f;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+
+	animation: hand 2.5s;
+	animation-iteration-count: infinite;
+}
+
+.igotyou-effect{
+	position: absolute;
+	left: 50%;
+	top: 10%;
+	transform: translate(-50%);
+	width: 80%;
+	height: 80%;
+
+	animation: hand 0.7s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes hand{
+	0% {opacity: 1;}
+	25% {opacity: 0;}
+	50% {opacity: 1;}
+	75% {opacity: 0.5;}
+	85% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+.typewriter-background{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: #231815;
+	z-index: 300;
+	opacity: 0.8;
+
+}
+
+
+/*.typewriter-effect-back{ 	z-index: 100; }*/
+
+.typewriter-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: normal; /* Keeps the content on a single line */
+  letter-spacing: .3em; /* Adjust as needed */
+  color: white;
+  z-index: 500;
+
+  animation: 
+    typing 2s steps(40, end),
+    blink-caret .3s step-end infinite; 
+  animation-iteration-count: infinite;
+
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0}
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white; }
+}
+
+.depression-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.95;
+	background-color: black;
+	z-index: 10;
+}
+
+
+.depression-effect {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #fceaf2;
+	font-size: 50px;
+	font-family: optima;
+	z-index: 10;
+
+}
+
+.D1 {width: 728px;}
+
+.D2 {width: 725px;}
+
+.D3 {width: 700px;}
+
+.bed-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.95;
+	background-color: black;
+	z-index: 10;
+
+		animation: bed-blink 3s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes bed-blink{
+	0% {background-color: yellow;}
+	20% {background-color: #cccc00;}
+	40% {background-color: #999900;}
+	60% {background-color: #666600;}
+	80% {background-color: #333300;}
+	100% {background-color: black;}
+}
+
+.bed-effect {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: yellow;
+	font-size: 7px;
+	z-index: 10;
+}
+
+.sadness-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.95;
+	background-color: black;
+	z-index: 10;
+}
+
+
+
+.sadness-effect {
+	position: fixed;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #000f87;
+	font-size: 30px;
+	font-family: serif;
+	z-index: 10;
+
+}
+
+.S1 {width: 706px; 	top: 10%;}
+
+.S2 {width: 903px; 	top: 30%;}
+
+.S3 {width: 1215px;	top: 55%;}
+
+.S4 {width: 200px;	top: 80%;}
+
 
 .blackout{
 	position: absolute;
@@ -197,14 +410,334 @@ q:hover{
 	top: 0;
 	left: 0;
 	background-color: black;
+	z-index: 10;
 }
+
+
+.erase-oval1 {
+	background-color: white;
+	width: 200px;
+	height: 100px;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+	z-index: 1;
+}
+
+.E1-1{
+	position: absolute;
+	top: 39%;
+	left: 20%;
+	-webkit-transform: rotate(0deg) skew(40deg);
+}
+.E1-2{
+	position: absolute;
+	top: 65%;
+	left: 26%;
+	-webkit-transform: rotate(-30deg) skew(0deg);
+}
+.E1-3{
+	position: absolute;
+	top: 25%;
+	left: 66%;
+	-webkit-transform: rotate(40deg) skew(50deg);
+}
+
+.E1-4{
+	position: absolute;
+	top: 24%;
+	left: 6%;
+	-webkit-transform: rotate(90deg) skew(80deg);
+}
+
+.E1-5{
+	position: absolute;
+	top: 54%;
+	left: 56%;
+	-webkit-transform: rotate(60deg) skew(-80deg);
+}
+
+.E1-6{
+	position: absolute;
+	top: 82%;
+	left: 6%;
+	-webkit-transform: rotate(0deg) skew(55deg);
+}
+
+.E1-7{
+	position: absolute;
+	top: 52%;
+	left: 74%;
+	-webkit-transform: rotate(90deg) skew(70deg);
+}
+
+.erase-oval2 {
+	background-color: white;
+	width: 200px;
+	height: 100px;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+	z-index: 1;
+}
+
+.E2-1{
+	position: absolute;
+	top: 17%;
+	left: 20%;
+	-webkit-transform: rotate(-50deg) skew(40deg);
+}
+.E2-2{
+	position: absolute;
+	top: 67%;
+	left: 12%;
+	-webkit-transform: rotate(30deg) skew(0deg);
+}
+.E2-3{
+	position: absolute;
+	top: 27%;
+	left: 54%;
+	-webkit-transform: rotate(-40deg) skew(70deg);
+}
+
+.E2-4{
+	position: absolute;
+	top: 24%;
+	left: 6%;
+	-webkit-transform: rotate(-120deg) skew(75deg);
+}
+
+.E2-4-1{
+	position: absolute;
+	top: 26%;
+	left: 6%;
+	-webkit-transform: rotate(120deg) skew(75deg);
+}
+
+.E2-4-2{
+	position: absolute;
+	top: 36%;
+	left: 30%;
+	-webkit-transform: rotate(60deg) skew(75deg);
+}
+
+.E2-5{
+	position: absolute;
+	top: 46%;
+	left: 56%;
+	-webkit-transform: rotate(-60deg) skew(-80deg);
+}
+
+.E2-6{
+	position: absolute;
+	top: 77%;
+	left: 26%;
+	-webkit-transform: rotate(-10deg) skew(-65deg);
+}
+
+.E2-7{
+	position: absolute;
+	top: 52%;
+	left: 74%;
+	-webkit-transform: rotate(-40deg) skew(-75deg);
+}
+
+.E2-7-1{
+	position: absolute;
+	top: 47%;
+	left: 62%;
+	-webkit-transform: rotate(40deg) skew(-75deg);
+}
+
+.erase-oval3 {
+	background-color: white;
+	width: 200px;
+	height: 100px;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+	z-index: 1;
+}
+
+.E3-1{
+	position: absolute;
+	top: 37%;
+	left: 25%;
+	-webkit-transform: rotate(-50deg) skew(75deg);
+}
+
+.E3-2{
+	position: absolute;
+	top: 58%;
+	left: 16%;
+	-webkit-transform: rotate(50deg) skew(73deg);
+}
+
+.E3-2-1{
+	position: absolute;
+	top: 60%;
+	left: 15%;
+	-webkit-transform: rotate(-50deg) skew(73deg);
+}
+
+.E3-3{
+	position: absolute;
+	top: 16%;
+	left: 54%;
+	-webkit-transform: rotate(-10deg) skew(80deg);
+}
+
+.E3-3-1{
+	position: absolute;
+	top: 19%;
+	left: 48%;
+	-webkit-transform: rotate(-35deg) skew(80deg);
+}
+
+.E3-4{
+	position: absolute;
+	top: 24%;
+	left: 3%;
+	-webkit-transform: rotate(-120deg) skew(80deg);
+}
+
+.E3-4-1{
+	position: absolute;
+	top: 40%;
+	left: 10%;
+	-webkit-transform: rotate(140deg) skew(78deg);
+}
+
+.E3-4-2{
+	position: absolute;
+	top: 60%;
+	left: 40%;
+	-webkit-transform: rotate(10deg) skew(80deg);
+}
+
+.E3-5{
+	position: absolute;
+	top: 56%;
+	left: 56%;
+	-webkit-transform: rotate(30deg) skew(-80deg);
+}
+
+.E3-6{
+	position: absolute;
+	top: 63%;
+	left: 26%;
+	-webkit-transform: rotate(30deg) skew(75deg);
+}
+
+.E3-7{
+	position: absolute;
+	top: 52%;
+	left: 74%;
+	-webkit-transform: rotate(40deg) skew(-75deg);
+}
+
+.E3-7-1{
+	position: absolute;
+	top: 42%;
+	left: 60%;
+	-webkit-transform: rotate(40deg) skew(75deg);
+}
+
+.E3-7-2{
+	position: absolute;
+	top: 35%;
+	left: 80%;
+	-webkit-transform: rotate(40deg) skew(75deg);
+}
+
+.E3-7-3{
+	position: absolute;
+	top: 23%;
+	left: 82%;
+	-webkit-transform: rotate(30deg) skew(35deg);
+}
+
+.E3-7-4{
+	position: absolute;
+	top: 40%;
+	left: 37%;
+	-webkit-transform: rotate(-50deg) skew(35deg);
+}
+
+.E3-7-5{
+	position: absolute;
+	top: 67%;
+	left: 40%;
+	-webkit-transform: rotate(-50deg) skew(75deg);
+}
+
+.E3-7-6{
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	-webkit-transform: rotate(-20deg) skew(78deg);
+}
+
+.E3-7-7{
+	position: absolute;
+	top: 80%;
+	left: 70%;
+	-webkit-transform: rotate(-20deg) skew(78deg);
+}
+
+.inspiration-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	z-index: 1150;
+}
+
+.inspiration-effect {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: #754a9d;
+	font-size: 30px;
+	font-family: optima;
+	z-index: 1200;
+
+}
+
+.inspiration1-1 {width: 314px;}
+
+.inspiration1-2 {width: 458px;}
+
+.inspiration1-3 {width: 458px;}
+
+.inspiration2-1 {width: 614px;}
+
+.inspiration2-2 {width: 389px;}
+
+.inspiration2-3 {width: 320px;}
+
+.invisible-top-layer-erase-wrapper .erase-oval3 {
+
+	z-index: 1100;
+}
+
 
 @font-face {
 	font-family: new-caledonia;
 	src: url(../font/NewCaledoniaLTStd.otf);
 }
 
+@font-face {
+	font-family: optima;
+	src: url(../font/optima.ttf);
+}
+
 .hide{
 	display: none;
 }
+
+.opacity{ opacity: 0; }
 
