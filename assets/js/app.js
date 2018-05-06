@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$(document).ready(function() {
 	
 	$('.wrapper').click(function(){
 		var button_name = $(this).data('button');
@@ -24,14 +24,10 @@ $( document ).ready(function() {
 		    $newmenu.removeClass('hide'); 
 		    $oldmenu.addClass('opacity'); 
 		    $ghost2.removeClass('hide'); 
+		    console.log("testing");
+
 		    // switch the old menu to new menu in b/w gitching, the opacity is there first 
 		    // for the glitching effect to finish
-
-		}, 3000);
-
-		setTimeout(function(){ 
-
-
 
 		}, 3000);
 
