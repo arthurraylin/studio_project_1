@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	
 	$('.wrapper').click(function(){
 		var button_name = $(this).data('button');
@@ -40,6 +41,19 @@ $(document).ready(function() {
 		// keyframe needs the ghost-animation to end in display none
 
 	});
+
+	var audio = $(".scream")[0];
+	$(".paranoia").mouseenter(function(){
+		audio.play();
+	});
+
+	var audio = $(".scream")[0];
+	$(".paranoia").mouseleave(function(){
+		audio.pause();
+	});
+
+
+
 
 	$(".red").mouseenter(function(){
 		var button_name = $(this).data('button');
@@ -280,40 +294,130 @@ $(document).ready(function() {
 	$('.joy').click(function(){
 		var button_name = $(this).data('button');
 
-	    var $I1_1 = $('.inspiration1-1');
+		var $I1_1 = $('.inspiration1-1');
 		var $I1_2 = $('.inspiration1-2');
 		var $I1_3 = $('.inspiration1-3');
 
+		var $I2_1 = $('.inspiration2-1');
+		var $I2_2 = $('.inspiration2-2');
+		var $I2_3 = $('.inspiration2-3');
 
-		$I1_1.removeClass('hide');
-		$('.inspiration-background').removeClass('hide')
+		var $I3_1 = $('.inspiration3-1');
+		var $I3_2 = $('.inspiration3-2');
+		var $I3_3 = $('.inspiration3-3');
+		// first click
+		if($(this).hasClass("first-click")) {
 
-		setTimeout(function(){ 
-			$I1_1.addClass('hide'); 
-		    $I1_2.removeClass('hide'); 
 
-		}, 4500);
-		setTimeout(function(){ 
-			$I1_2.addClass('hide'); 
-		    $I1_3.removeClass('hide');
-			
-		}, 9000);
-		setTimeout(function(){ 
-			$I1_3.addClass('hide'); 
-			
-		}, 13500);
+			$I1_1.removeClass('hide');
+			$('.inspiration-background').removeClass('hide')
 
-		setTimeout(function(){ 
-			$('.inspiration-background').addClass('hide')
+			setTimeout(function(){ 
+				$I1_1.addClass('hide'); 
+			    $I1_2.removeClass('hide'); 
 
-		}, 14200);
+			}, 4500);
+			setTimeout(function(){ 
+				$I1_2.addClass('hide'); 
+			    $I1_3.removeClass('hide');
+				
+			}, 9000);
+			setTimeout(function(){ 
+				$I1_3.addClass('hide'); 
+				
+			}, 13500);
 
- 		setTimeout(function(){ 
-			$('.erase-oval3').removeClass('hide')
-			$('.invisible-oval3').addClass('invisible-top-layer-erase')			
-			$('.invisible-top-layer-erase-wrapper').removeClass('hide')
+			setTimeout(function(){ 
+				$('.inspiration-background').addClass('hide')
 
-		}, 5000);
+			}, 14200);
+
+	 		setTimeout(function(){ 
+				$('.erase-oval1').removeClass('hide')			
+				$('.invisible-oval1').removeClass('hide')
+
+			}, 5000);
+
+			console.log("first click");
+			$(this).removeClass('first-click');
+			$(this).addClass('second-click');
+
+		} else if ($(this).hasClass("second-click")) {
+
+			$I2_1.removeClass('hide');
+			$('.inspiration-background').removeClass('hide')
+
+			setTimeout(function(){ 
+				$I2_1.addClass('hide'); 
+			    $I2_2.removeClass('hide'); 
+
+			}, 4500);
+			setTimeout(function(){ 
+				$I2_2.addClass('hide'); 
+			    $I2_3.removeClass('hide');
+				
+			}, 9000);
+			setTimeout(function(){ 
+				$I2_3.addClass('hide'); 
+				
+			}, 13500);
+
+			setTimeout(function(){ 
+				$('.inspiration-background').addClass('hide')
+
+			}, 14200);
+
+	 		setTimeout(function(){ 
+				$('.erase-oval2').removeClass('hide')			
+				$('.invisible-oval2').removeClass('hide')
+
+			}, 5000);
+
+			//Add the stuff you want to happen on the second click
+			console.log("Second click");
+
+			$(this).removeClass('second-click');
+			$(this).addClass('third-click');
+
+		} else if ($(this).hasClass("third-click")) {
+
+			$I3_1.removeClass('hide');
+			$('.inspiration-background').removeClass('hide')
+
+			setTimeout(function(){ 
+				$I3_1.addClass('hide'); 
+			    $I3_2.removeClass('hide'); 
+
+			}, 4500);
+			setTimeout(function(){ 
+				$I3_2.addClass('hide'); 
+			    $I3_3.removeClass('hide');
+				
+			}, 9000);
+			setTimeout(function(){ 
+				$I3_3.addClass('hide'); 
+				
+			}, 13500);
+
+			setTimeout(function(){ 
+				$('.inspiration-background').addClass('hide')
+
+			}, 14200);
+
+	 		setTimeout(function(){ 
+				$('.erase-oval3').removeClass('hide')			
+				$('.invisible-oval3').removeClass('hide')
+
+			}, 5000);
+
+			//Add the stuff you want to happen on the third click.
+			console.log('hi');
+
+			$(this).removeClass('third-click');
+			$(this).addClass('forth-click');
+		}
+
+
 
 	});
 

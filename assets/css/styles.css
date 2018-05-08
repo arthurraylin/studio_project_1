@@ -308,6 +308,10 @@ q:hover{
   50% { border-color: white; }
 }
 
+.scream{
+	
+}
+
 .depression-background {
 	position: fixed;
 	top: 0;
@@ -425,6 +429,15 @@ q:hover{
 	z-index: 1;
 }
 
+.invisible-oval1 {
+	background-color: white;
+	width: 200px;
+	height: 100px;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+}
+
 .E1-1{
 	position: absolute;
 	top: 39%;
@@ -480,6 +493,15 @@ q:hover{
 	-webkit-border-radius: 100px / 50px;
 	border-radius: 100px / 50px;
 	z-index: 1;
+}
+
+.invisible-oval2 {
+	background-color: white;
+	width: 200px;
+	height: 100px;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
 }
 
 .E2-1{
@@ -558,6 +580,15 @@ q:hover{
 	-webkit-border-radius: 100px / 50px;
 	border-radius: 100px / 50px;
 	z-index: 1;
+}
+
+.invisible-oval3 {
+	background-color: white;
+	width: 200px;
+	height: 100px;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
 }
 
 .E3-1{
@@ -720,9 +751,18 @@ q:hover{
 
 .inspiration2-3 {width: 320px;}
 
-.invisible-top-layer-erase-wrapper .erase-oval3 {
+
+.inspiration3-1 {width: 550px;}
+
+.inspiration3-2 {width: 680px;}
+
+.inspiration3-3 {width: 665px;}
+
+
+.invisible-top-layer-erase-wrapper .invisible-oval1, .invisible-top-layer-erase-wrapper .invisible-oval2, .invisible-top-layer-erase-wrapper .invisible-oval3 {
 
 	z-index: 1100;
+	opacity: 0;
 }
 
 
